@@ -4,6 +4,8 @@
 <% item = @product['result'] %>
 
 <p><ul>
+    
+    <%= image_tag(item['image_thumb_url']) %>
     <li><%="Product Name: "%><%= item['name'] %></li>
     <li><%="Price: "%><%= number_to_currency (item['price_in_cents'].to_f / 100) %></li>
     <li><%="Is VQA?: "%><%= item['is_vqa'] %></li>
