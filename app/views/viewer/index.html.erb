@@ -1,0 +1,15 @@
+<h1>Viewer#index</h1>
+<p>Find me in app/views/viewer/index.html.erb</p>
+
+<% @products['result'].each do |product| %>
+  <section>
+    <%="Product Name: "%><%= link_to product['name'], viewer_path(product['id']) %>
+    
+    <%="Price: "%><%= number_to_currency (product['price_in_cents'].to_f / 100) %>
+    <%="Liquor Type: "%><%= product['primary_category'] %>
+  </section>
+<% end %>
+
+
+<%# price_in_dollars = (product['price_in_cents'] .to_f / 100) %><%#= sprintf("%.2f", price_in_dollars) %>
+    <%#= "$#{product.format_price}" %>

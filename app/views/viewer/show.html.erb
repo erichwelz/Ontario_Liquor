@@ -1,0 +1,19 @@
+<h1>Viewer#show</h1>
+<p>Find me in app/views/viewer/show.html.erb</p>
+
+<% item = @product['result'] %>
+
+<p><ul>
+    <li><%="Product Name: "%><%= item['name'] %></li>
+    <li><%="Price: "%><%= number_to_currency (item['price_in_cents'].to_f / 100) %></li>
+    <li><%="Is VQA?: "%><%= item['is_vqa'] %></li>
+    <li><%="Alcohol Content: "%><%= item['alcohol_content'].to_f / 100 %><%= "%" %>
+    <li><%="Origin: "%><%= item['origin'] %>
+  </ul>
+</p>
+
+
+
+
+ 
+

@@ -1,0 +1,15 @@
+<h1>Stores#index</h1>
+<p>Find me in app/views/stores/index.html.erb</p>
+
+<% @stores %>
+
+<ol>
+<% @stores['result'].each do |store| %>
+ <li><%#= "City: "%><%#= store['city'] %>
+  <%= "Store Name: "%><%= link_to store['name'], store_path(store['id']) %></li>
+<% end %>
+</ol>
+<%# @products['result'].each do |product| %>
+ 
+   <%#= link_to product['name'], viewer_path(product['id']) %>
+    <%#="Liquor Type: "%><%#= product['primary_category'] %>

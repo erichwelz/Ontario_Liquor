@@ -1,0 +1,29 @@
+<h1>Stores#show</h1>
+<p>Find me in app/views/stores/show.html.erb</p>
+
+<% store = @store['result'] %>
+
+<p><ul>
+    <li><%="Store: "%><%= store['name'] %></li>
+    <li><%="City: "%><%= store['city'] %></li>
+    <li><%="Address: "%><%= store['address_line_1'] %></li>
+    <li><%="Inventory Volume in Cubic Meters: "%><%= store['inventory_volume_in_milliliters'].to_f / (10 ** 6) %></li>
+    <li><%="Sunday Hours: "%><%= time_24h(store['sunday_open']) %>
+      <%="til "%><%= time_24h(store['sunday_close']) %></li>
+    <li><%="Monday Hours: "%><%= time_24h(store['monday_open']) %>
+    <%="til "%><%= time_24h(store['monday_close']) %></li>
+    <li><%="Tuesday Hours: "%><%= time_24h(store['tuesday_open']) %>
+    <%="til "%><%= time_24h(store['tuesday_close']) %></li>
+    <li><%="Wednesday Hours: "%><%= time_24h(store['wednesday_open']) %>
+    <%="til "%><%= time_24h(store['wednesday_close']) %></li>
+    <li><%="Thursday Hours: "%><%= time_24h(store['thursday_open']) %>
+    <%="til "%><%= time_24h(store['thursday_close']) %></li>
+    <li><%="Friday Hours: "%><%= time_24h(store['friday_open']) %>
+    <%="til "%><%= time_24h(store['friday_close']) %></li>
+    <li><%="Saturday Hours: "%><%= time_24h(store['saturday_open']) %>
+    <%="til "%><%= time_24h(store['saturday_close']) %></li>
+
+  </ul>
+</p>
+
+
