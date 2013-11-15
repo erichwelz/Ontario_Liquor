@@ -3,7 +3,7 @@ class StoresController < ApplicationController
   
   # def index
   #   stores_json = open("http://lcboapi.com/stores?per_page=50").read
-  #   @stores = JSON.parse(stores_json)
+  #   @stores = JSON.parse(stores_json)['result']
   # end
 
   def index
@@ -19,9 +19,6 @@ class StoresController < ApplicationController
     @stores
 
   end
-
-
-
 
 
   def show
