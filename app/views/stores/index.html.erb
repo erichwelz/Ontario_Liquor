@@ -4,7 +4,7 @@
 <% @stores %>
 
 <ol>
-<% @stores['result'].each do |store| %>
+<% @stores.each do |store| %>
  <li><%#= "City: "%><%#= store['city'] %>
   <%= "Store Name: "%><%= link_to store['name'], store_path(store['id']) %></li>
 <% end %>
