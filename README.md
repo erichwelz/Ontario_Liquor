@@ -1,4 +1,3 @@
-Ontario_Liquor
-==============
+Bitmaker Labs Week 3: Rails API practice. Scrapes all Rails liquour prices and store locations circumvent API's recommended record limits
 
-Rails API practice
+Ruby 2.00 / Rails 4.00
